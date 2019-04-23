@@ -4,12 +4,26 @@ import java.util.*
 
 fun main() {
     var scanner = Scanner(System.`in`)
-    print("Please enter number of tickets: ")
-    var tickets = scanner.nextInt()
-    print("How many round-trip tickets: ")
-    var roundTrip = scanner.nextInt()
-    var ticketKotlin = TicketKotlin(tickets, roundTrip)
-    ticketKotlin.print()
+    var tickets = 0
+    while (tickets != -1) {
+        print("Please enter number of tickets: ")
+        tickets = scanner.nextInt()
+        if (tickets != -1) {
+            print("How many round-trip tickets: ")
+            var roundTrip = scanner.nextInt()
+            while (roundTrip > tickets) {
+                println("Input error. Must lower than number of tickets!")
+                println("How many round-trip tickets: ")
+                roundTrip = scanner.nextInt()
+            }
+            var ticketKotlin = TicketKotlin(tickets, roundTrip)
+            ticketKotlin.print()
+        } else {
+            println("\n========== end ==========")
+        }
+
+    }
+
 }
 
 class TicketKotlin(var tickets: Int, var roundTrip: Int) {
