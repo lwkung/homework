@@ -28,3 +28,36 @@
  (訂完一次後，繼續下一次訂票)
 
 當使用者想結束訂票時，只要購買張數輸入 -1 ，即結束程式。
+
+# Homework 03 - 郵局便利箱
+
+假設郵局有兩種便利箱:
+
+Box3: 長23，寬14，高13 (cm)
+
+Box5: 長39.5，寬27.5，高23 (cm)
+
+1. 請利用物件導向的類別設計這兩個類別，並在這兩個類別(Box3與Box5)中設計方法:
+
+
+	    public boolean validate(float length, float width, int height) {
+ 
+        }        
+    
+   並在這方法中設計會回傳(boolean)該箱子是否能容納傳入的長、寬、高的物體。
+
+2. 建立BoxTester類別，程式的main方法中設計讓使用者輸入他想寄送物件的長寬高，
+   並利用Box5與Box3兩個類別完成以下的設計:
+   
+   
+        Please enter object's length: 15
+	    Please enter object's width: 18
+	    Please enter object's height: 10
+	    Box5
+	    
+	    或
+	    
+	    Please enter object's length: 20
+	    Please enter object's width: 11
+	    Please enter object's height: 9
+	    Box3
